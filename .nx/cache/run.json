@@ -1,0 +1,21 @@
+{
+  "run": {
+    "command": "nx build ui-components",
+    "startTime": "2025-02-05T09:06:22.290Z",
+    "endTime": "2025-02-05T09:06:26.341Z",
+    "inner": false
+  },
+  "tasks": [
+    {
+      "taskId": "ui-components:build",
+      "target": "build",
+      "projectName": "ui-components",
+      "hash": "7745156253804091330",
+      "startTime": "2025-02-05T09:06:22.295Z",
+      "endTime": "2025-02-05T09:06:26.341Z",
+      "params": "",
+      "cacheStatus": "cache-miss",
+      "status": 0
+    }
+  ]
+}

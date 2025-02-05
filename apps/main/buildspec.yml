@@ -1,0 +1,32 @@
+version: 0.2
+
+env:
+    parameter-store:
+        REACT_APP_AUTH0_DOMAIN: /cryptonite-app/dev/auth0-domain
+        REACT_APP_AUTH0_CLIENT_ID: /cryptonite-app/dev/auth0-client-id
+
+phases: 
+    install:
+        runtime-versions:
+            nodejs: latest
+        commands:
+            - echo "installing dependencies"
+            - npm ci
+            - echo "dependencies installed successfully"
+    pre_build:
+        commands: 
+            - echo "we are in the pre build phase"
+    build:
+        commands:
+            - echo "Building the React project"
+            - npm run build
+            - echo "Build completed successfully"
+    post_build:
+        commands:
+            - echo "we are in the post build phase"
+
+artifacts:
+    files:
+        - '**/*'
+    discard-paths: no
+    base-directory: 'dist'
